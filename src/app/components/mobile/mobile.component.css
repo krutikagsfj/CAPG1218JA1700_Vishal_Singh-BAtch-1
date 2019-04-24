@@ -1,0 +1,27 @@
+table{
+    width:50%;
+    height: 50%;
+}
+th{
+    padding: 12px 20px;
+}
+
+th:hover{
+    background-color: brown;
+    color: white;
+}
+
+td{
+    margin: 12px 0;
+    padding: 2px 4px;
+}
+
+h2{
+    position: relative;
+    left: 240px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover{
+    background-color: black;
+}

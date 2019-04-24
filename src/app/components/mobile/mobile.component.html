@@ -1,0 +1,23 @@
+<h2 >Mobile Details</h2>
+<div class="container">
+<table class="table table-hover" border="2 solid black" height="100" width="100">
+  <tr>
+    <th (click)="sortById()">Mobile Id</th>
+    <th (click)="sortByName()">Mobile name</th>
+    <th (click)="sortByPrice()">Mobile Price</th>
+    <th>Action</th>
+  </tr>
+
+  <!--Iterating mobile data through ngFor-->
+  <tr *ngFor="let mob of mobData |sort:mobileSort">
+    <td>{{mob.mobId}}</td>
+    <td>{{mob.mobName}}</td>
+    <!--currency pipe used for currency symbol-->
+    <td>{{mob.mobPrice| currency}}</td> 
+
+    <!--Button for deletion. It will call delete() method in mobile.component.ts file-->
+    <td><input type="button" value="Delete" (click)="delete(mob)"></td>
+  
+  </tr>
+</table>
+</div>
